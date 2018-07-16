@@ -7,22 +7,21 @@ O(m log n)
 
 
 ```
-**method** dis[] djikstra(Graph, src):
-  dis[src] := 0
-  for each vertex v in Graph:
-    if v = src
-      dis[v] := integer.max
-    add v to q
-    
+void computePaths(Vertex src):
+  src.min := 0
+  q.add(src)
+     
   while q is not empty:
-    v := vertex in q with min dis[v]
-    remove v from q
+    u := q.poll();
     
-    for each neighbour u of v:
-      alt := dis[v] + len(v,u)
-      if alt < dis[u]:
-        dis[u] := alt
-        
-  return dis[]
+    for each edge e in u.adj:
+      v := e.target
+      w := e.weight
+      dis_to_u := u.min + weight
+      if dis_to_u < v.min:
+        q.remove(v)
+        v.min = dis_to_u
+        v.prev = u
+        q.add(v)       
 ```
 
