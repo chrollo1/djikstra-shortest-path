@@ -2,9 +2,6 @@
 
 Given a directed graph G = (V, E) with positive edge weights, the single-source shortest path problem can be solved using Djikstra's shortest path algorithm.
 
-The time complexity of such is: 
-O(m log n)
-
 
 ```
 void computePaths(Vertex src):
@@ -25,3 +22,5 @@ void computePaths(Vertex src):
         q.add(v)       
 ```
 
+The time complexity of such is: 
+OO(mm loglog nn)
