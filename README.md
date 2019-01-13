@@ -24,4 +24,4 @@ void computePaths(Vertex src):
 
 The time complexity of such is: 
 ---
-####O(m log n)
+#O(m log n)
